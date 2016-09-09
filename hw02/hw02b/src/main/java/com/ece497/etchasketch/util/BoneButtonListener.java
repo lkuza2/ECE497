@@ -31,15 +31,15 @@ public class BoneButtonListener implements ButtonListener {
         EtchASketchTable etchASketchTable = MainUtil.getInstance().getTable();
         if (etchASketchTable != null) {
             switch (pin) {
-                case BBBNames.P9_17:
+                case BBBNames.P8_13:
                     //left arrow
                     etchASketchTable.handleKeyStroke(KeyStroke.fromString("<left>"));
                     break;
-                case BBBNames.P9_11:
+                case BBBNames.P9_14:
                     //right arrow
                     etchASketchTable.handleKeyStroke(KeyStroke.fromString("<right>"));
                     break;
-                case BBBNames.P9_13:
+                case BBBNames.P9_16:
                     //down arrow
                     etchASketchTable.handleKeyStroke(KeyStroke.fromString("<down>"));
                     break;

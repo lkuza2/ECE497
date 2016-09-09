@@ -54,8 +54,8 @@ public class BoardUtil {
      */
     public void attachInterruptToPin(String pin) {
         DigitalInput digitalInput = BoardUtil.getInstance().getBoard().getPin(pin).as(DigitalInput.class);
-
         Button button = new Button(digitalInput, Signal.Low);
+
         button.addListener(new BoneButtonListener(pin));
     }
 

@@ -65,7 +65,7 @@ public class MainUtil {
     /**
      * Represents the pins the BB uses for buttons
      */
-    public static final String[] BUTTON_PINS = {BBBNames.P9_11, BBBNames.P9_13, BBBNames.P9_42, BBBNames.P9_17};
+    public static final String[] BUTTON_PINS = {BBBNames.P9_14, BBBNames.P9_16, BBBNames.P9_42, BBBNames.P8_13};
 
     /**
      * Object for the etchasketch table
