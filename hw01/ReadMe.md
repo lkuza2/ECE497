@@ -18,3 +18,15 @@ Here is a short video of it in action: https://www.youtube.com/watch?v=ql88NeDYA
 6)  I signed up for the Google Groups a while ago
 
 7)  Wrote the Etch-A-Sketch program found here
+
+==========
+Comments from Prof. Yoder
+Could you build the .jar for me?
+apt-get install java doesn't work on my bone.  What should I do?
+
+Nice video.
+
+Grade:  8/10
+I'll give you more points once I get java install and you get me the .jar file.
+
+Looks like a great start.
