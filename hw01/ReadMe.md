@@ -30,3 +30,6 @@ Grade:  8/10
 I'll give you more points once I get java install and you get me the .jar file.
 
 Looks like a great start.
+===========
+use apt-get install oracle-java8-installer
+to install Java 8. 
