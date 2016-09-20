@@ -15,3 +15,9 @@ The Etch-A-Sketch program was created in Intelli J Idea, and can be opened in th
 
 TO BUILD:
 in either folder, run "mvn package" and in the "target" folder will contains the jars with dependencies
+
+==========
+Comments from Prof. Mark A. Yoder
+Lots of nice extras, Java, Arch, etc.
+
+Grade:  10/10
