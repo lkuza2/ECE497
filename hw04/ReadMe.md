@@ -1,23 +1,17 @@
-This project was created in Java using a modified version of the Bulldog library by Luke Kuza to work on newer BeagleBone kernels.
+Homework 04
 
-The original library (with pull requests) is found here, https://github.com/SilverThings/bulldog
+In the mmap folder is the modified C code to light up LEDs based on two buttons.  This lights up to LEDs connected with pullup resistors and does not use the USR LEDs.
 
-My version is found here: https://github.com/lkuza2/bulldog
+Before writing any code, write a paragraph describing how boneServer.js and the browser interact in the given example. For example, in matrixLED.js connect() is called to make a connection between the browser and the bone.  The message “matrix” is sent to the bone. What happens in response to the message? 
 
 
-The hw03 folder contains a project that uses two TMP101 sensors using I2C.  It uses the Lanterna framework for GUI handling, it is an ncurses like framework.  The hw03 projects sets up the sensors with the highest precision, and gives a 24 degree C low and 25 degree high limit for the sensors.  When the ALERT pin is triggered, the sensor it was triggered on will display on the GUI
+What happens when an “LED” is clicked on in the browser?
+The node.js server gets a callback from the click, containing the element clicked, and uses this element to lookup what physical LED that it represents, and sets the LED status accordingly.
 
-This project was created in Java 8 using Maven to manage build dependencies. For terminal graphics, the project uses an ncurses like Java framework called Lanterna, found here: https://github.com/mabe02/lanterna/
+What entry in matrix.css is used to color the LED?
 
-For GPIO control on the BBB, the project uses a Java library called BullDog: https://github.com/SilverThings/bulldog (my version: https://github.com/lkuza2/bulldog)
 
-The Etch-A-Sketch program was created in Intelli J Idea, and can be opened in the studio and a .jar file built. Once the .jar file is built, it can be ran using "java -jar file.jar". Note that the Bone must have Java installed from apt-get.  It also uses the Lanterna framework, and the modified Bulldog framework.  It runs the Etch-A-Sketch on an 8x8 LED and supports screen wrapping.
+Write a high level paragraph about how you will control the two LEDs. What messages will be sent between the browser and the bone?
 
-TO BUILD:
-in either folder, run "mvn package" and in the "target" folder will contains the jars with dependencies
-
-==========
-Comments from Prof. Mark A. Yoder
-Lots of nice extras, Java, Arch, etc.
-
-Grade:  10/10
+Write your code.  Do you need to change boneServer.js? (I don’t think so.)  Customize the html to have your name on it, etc.
+No. 
