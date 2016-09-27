@@ -81,7 +81,9 @@ int main(int argc, char *argv[]) {
     gpio_setdataout_addr1   = gpio_addr1 + GPIO_SETDATAOUT;
     gpio_cleardataout_addr1 = gpio_addr1 + GPIO_CLEARDATAOUT;
 
+    system("echo 20 > /sys/class/gpio/unexport");
     system("echo 20 > /sys/class/gpio/export");
+    system("echo out > /sys/class/gpio/gpio20/direction");
     //system("echo 65 > /sys/class/gpio/export");
 
     if(gpio_addr == MAP_FAILED) {
