@@ -122,6 +122,10 @@ clean :
 # make sure they are set properly - this helps with 
 # debugging makefile errors.
 
-
+.PHONY : test
+test:
+	@echo CC = $(CC)
+	@echo CFLAGS = $(CFLAGS)
+	@echo LINUXarm_GCC = $(LINUXarm_GCC)
 	
 
