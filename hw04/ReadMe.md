@@ -19,3 +19,10 @@ I will perform interrupts from callbacks and use bonescript
 
 Write your code.  Do you need to change boneServer.js? (I don’t think so.)  Customize the html to have your name on it, etc.
 No. 
+
+==========
+Prof. Yoder's comments
+I don't see the Memory Map like figure 2-5.
+Otherwise it looks good.
+
+Grade:  9/10
