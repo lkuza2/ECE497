@@ -1,0 +1,74 @@
+<html>
+<body>
+<div id="container" style="width:100%; height:400px;"></div> 
+<script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script> 
+<script src="http://code.highcharts.com/highcharts.js"></script> 
+<script> 
+  // Initialize Firebase
+  // TODO: Replace with your project's customized code snippet
+  var temps = [];
+  var times = [];
+  var config = {
+    databaseURL: "https://beaglebone-black.firebaseio.com",
+  };
+
+  Highcharts.setOptions({
+  			global: {
+			useUTC: false
+		}
+  });
+
+  firebase.initializeApp(config);
+  var data = firebase.database().ref('temperature/data').orderByChild('timestamp');
+  data.on('child_added', function(snapshot){
+  	var model = snapshot.val();
+  	temps.push([ new Date(model.timestamp).getTime(), model.temperature]);
+  	times.push(model.timestamp);
+  	console.log(new Date(model.timestamp));
+$('#container').highcharts({
+        chart: {
+            type: 'spline'
+        },
+        title: {
+            text: 'Beagle Bone Temperature'
+        },
+        subtitle: {
+            text: ''
+        },
+        xAxis: {
+        	type: 'datetime',
+        	dateTimeLabelFormats: {
+        		second:"%A, %b %e, %H:%M:%S"
+        	},
+        	title: {
+        		text: 'Time/Date'
+        	}
+        },
+        yAxis: {
+            title: {
+                text: 'Temperature (°C)'
+            }
+        },
+
+        tooltip: {
+        	headerFormat: '<b>{series.name}</b><br>',
+            pointFormat: '{point.x:%e. %b}: {point.y:.2f} degrees C'
+        },
+
+        plotOptions: {
+        	spline: {
+        		marker: {
+        			enabled: true
+        		}
+        	}
+        },
+        series: [{
+            name: 'Temperature 1 Sensor',
+            data: temps
+        }]
+    });
+  });
+</script>
+</body>
+</html>

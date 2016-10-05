@@ -1,0 +1,41 @@
+shadow5588@instance-1:~/BeagleBoard-exercises$ ls
+blessed        gstreamer         linux        rtl-sdr            usb
+cookbook       helloWorld.c      mathematica  satelliteTracking  video
+csound         i2c               node.js      sensors            vm
+displays       iot               Old          servoBell          web
+docker         Jaars             pinLabels    setup              xenomai
+esp8266        labview           pptx         sonic-pi           xM
+etch-a-sketch  launchPad         pru          speechDemo
+fritzing       launchPad_bb.png  python       stream-adventure
+gpio           launchPad.fzz     README.md    studentWork
+grove          launchPad.js      realtime     test.html
+shadow5588@instance-1:~/BeagleBoard-exercises$ nano helloWorld.c
+shadow5588@instance-1:~/BeagleBoard-exercises$ gcc helloWorld.c
+shadow5588@instance-1:~/BeagleBoard-exercises$ file a.out
+a.out: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, for GNU/Linux 2.6.32, BuildID[sha1]=244870bd6f58fc22222750bc1c45b4731d039852, not stripped
+shadow5588@instance-1:~/BeagleBoard-exercises$
+shadow5588@instance-1:~/BeagleBoard-exercises$ ./a.out
+Hello, World! Main is executing at 0x400506
+This address (0x7ffe9920e978) is in our stack frame
+This address (0x600a20) is in our bss section
+This address (0x600a18) is in our data section
+
+
+shadow5588@instance-1:~/BeagleBoard-exercises$ export ARCH=arm
+shadow5588@instance-1:~/BeagleBoard-exercises$ export CROSS_COMPILE=arm-linux-gnueabihf-
+shadow5588@instance-1:~/BeagleBoard-exercises$ export PATH=$PATH:~/bb-kernel/dl/gcc-linaro-6.1.1-2016.08-x86_64_arm-linux-gnueabihf/bin/
+shadow5588@instance-1:~/BeagleBoard-exercises$ ${CROSS_COMPILE}gcc helloWorld.c
+shadow5588@instance-1:~/BeagleBoard-exercises$ file a.out
+a.out: ELF 32-bit LSB executable, ARM, EABI5 version 1 (SYSV), dynamically linked, interpreter /lib/ld-linux-armhf.so.3, for GNU/Linux 2.6.32, BuildID[sha1]=24aa935485898a8527a0e8889266c1fe422e1355, not stripped
+
+
+Bone:
+root@beaglebone:~# ls
+Weavedssh22.log  a.out  git
+root@beaglebone:~# chmod +x a.out
+root@beaglebone:~# ./a.out
+Hello, World! Main is executing at 0x103d5
+This address (0xbe8e0bf4) is in our stack frame
+This address (0x20668) is in our bss section
+This address (0x20660) is in our data section
+root@beaglebone:~#
