@@ -1,20 +1,13 @@
-Homework 05
+iHomework 07
 
-This homework contains multiple folders.
+This homework contains multiple folders and files.
 
-In the "linux" folder, there is a completed Makefile for hw05 that builds app.c.  Just run make from the command line.
+In the "ScopeTestImages" folder, there are properly named scope images for each of the four tests required for this homework.  
 
-The kernel source was installed on a Google Cloud machine, and I build kernel version 4.8 and installed it to the Bone.  It booted.
+The "ebb" folder contains the edited PRU template code to copy an input signal to another pin.  Simply run "source setup.sh", "make", and then "make install" to run on the PRU.
 
-The folder "crosscompile" contains command line output from cross compiling helloWorld.c on a Google Cloud machine and then running it on the Bone.
+The "hw07" folder is the high level test written in Java to simply copy a signal input to an output pin.  Simply run "mvn compiler:compile package" to compile the project to a runnable JAR file (need JDK 8 at least) and run "java -jar output.jar" to run the JAR.
 
-"hw05" contains a Java project that uses Firebase to push temperature data to the Firebase Cloud every 5 seconds. Simply run "maven compiler:compile package" to produce a JAR file and run it with "java -jar file.jar" to run, and the program will continously log temperature data.  
+The "mmap" folder is the mmap C test code based on hw04.  It copies the input signal using memory mapped IO.
 
-"temperature.html" is a file I wrote that is node.js independent.  It utilizes the Javascript Firebase API and a graphing API to pull data from Firebase and plot it on a graph.  This is running on my server at "https://lukekuza.me/temperature.html"
-
-==========
-Prof. Yoder's comments
-Looks good and complete.
-Thanks for the Firebase demo.
-
-Grade:  10/10
+The file "hw07-Report-kuzalj.pdf" is VERY IMPORTANT and contains the entire analysis, comments, and conclusions for this homework.  It contains a neat table of the data acquired.  Please read that file for more information.  It does not contain the scope images, as they were left out to save Github space.  They can be found in "ScopeTestImages" as previously described.  
