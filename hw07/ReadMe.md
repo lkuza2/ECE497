@@ -10,4 +10,6 @@ The "hw07" folder is the high level test written in Java to simply copy a signal
 
 The "mmap" folder is the mmap C test code based on hw04.  It copies the input signal using memory mapped IO.
 
+The "gpio-test" folder contains the kernel module code.
+
 The file "hw07-Report-kuzalj.pdf" is VERY IMPORTANT and contains the entire analysis, comments, and conclusions for this homework.  It contains a neat table of the data acquired.  Please read that file for more information.  It does not contain the scope images, as they were left out to save Github space.  They can be found in "ScopeTestImages" as previously described.  
