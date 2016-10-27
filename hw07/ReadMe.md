@@ -13,3 +13,10 @@ The "mmap" folder is the mmap C test code based on hw04.  It copies the input si
 The "gpio-test" folder contains the kernel module code.
 
 The file "hw07-Report-kuzalj.pdf" is VERY IMPORTANT and contains the entire analysis, comments, and conclusions for this homework.  It contains a neat table of the data acquired.  Please read that file for more information.  It does not contain the scope images, as they were left out to save Github space.  They can be found in "ScopeTestImages" as previously described.  
+
+==========
+Prof. Yoder's comments
+Good report.  Didn't preport min/max/ave times.
+I wanted measured cpu usage.
+
+Grade:  9/10
